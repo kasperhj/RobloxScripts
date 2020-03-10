@@ -1,0 +1,6 @@
+local Teleport = workspace.TeleportPad -- Name of the Part you touch to teleport to the part you are teleporting to (Change all TeleportPads to the name of your Part)
+function Touch(hit)
+ if script.Parent.Locked == false and script.Parent.Parent:FindFirstChild("TeleportPad").Locked == false then script.Parent.Locked = time script.Parent.Parent:FindFirstChild("TeleportPad").Locked = true
+  local pos = script.Parent.Parent:FindFirstChild("TeleportPad")
+hit.Parent:moveTo(workspace.TeleportPoint.Position) wait(1) script.Parent.Locked = false script.Parent.Parent:FindFirstChild("TeleportPad").Locked = false end end
+script.Parent.Touched:Connect(Touch)
